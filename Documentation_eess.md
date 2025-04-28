@@ -82,7 +82,7 @@ In another terminal, run the simulator, start Kafka producer service, details in
 
 Messages are received when you see the following prompts:
 
-<img src='image-4.png' style='height:13px'>
+<img src='image-4.png' style='width:30%'>
 
 The embedding model is being trained if you see..
 
@@ -94,7 +94,8 @@ All data is processed when you see `process over!!!!` Like this:
 ![alt text](image-6.png)
 
 In terminal, stop the program with ```ctrl + c```
-<img src='image-7.png' style='height:30px'>
+
+<img src='image-7.png' style='width:60%'>
 
 #### 4.5. Verify output
 You can find similarity file in
@@ -117,7 +118,7 @@ python main.py -f config/examples/config-evaluation.yaml
 ```
 Results of evaluation are shown as follows: 
 
-<img src='image-8.png' style='height:130px'> <br><br>
+<img src='image-8.png' style='width:70%'> <br><br>
 
 
 > Repete 3-6 for more tests
