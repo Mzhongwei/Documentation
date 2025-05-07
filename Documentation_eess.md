@@ -22,7 +22,7 @@ you will get code with the following structure:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate # in Ubuntu system, try `. venv/bin/activate`
 
 pip install -r requirements.txt
 pip install git+https://github.com/dpkp/kafka-python.git
@@ -118,9 +118,13 @@ python main.py -f config/examples/config-evaluation.yaml
 ```
 Results of evaluation are shown as follows: 
 
-<img src='image-8.png' style='width:70%'> <br><br>
+<img src='image-8.png' style='width:70%'> 
 
-
+Get statistical results shown as graphs by command:
+```bash
+scp <original path> <new path>
+```
+<br><br>
 > Repete 3-6 for more tests
 
 ## Simulator
