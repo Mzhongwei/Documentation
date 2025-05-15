@@ -1,6 +1,6 @@
 # Guide for ER project
 ## Preparation
-To run the whole incremental process, we need two terminal. 
+We need <b>two</b> terminals to run the whole incremental ER Program 
 - <b>Terminal 1 (T1)</b> for the kafka consumer and train the embedding model. folder: `er_embedding_streaming/`
 - <b>Terminal 2 (T2)</b> for the kafka producer who simulate the data sequences. folder: `dataStreamSimulator/`
 
@@ -62,7 +62,7 @@ Remove extension `.example`
 ```bash
 python main.py -f config/examples/config-batch.yaml
 ```
-In termial, you'll get:
+In the termial, you'll get:
 ![alt text](image.png)
 This may take a few seconds or minutes. 
 ##### 1.3. Verify the output in the following folders (T1)
@@ -98,8 +98,8 @@ You'll get..
 ![alt text](image-1.png)
 Kafka consumer service is waiting for the producer to send messages to broker.
 
-#### 2.3. Run the simulator (T2)
-<b>In another terminal 2</b> (IMPORTANT!!!)
+#### 2.3. Run the kafka produer (T2)
+<b>In another terminal, T2</b> (IMPORTANT!!!)
 
 ##### 2.3.1. Modify the config file by your own settings
 Find confi file in `dataStreamSimulator/src/main/resources/application.properties.example`
@@ -107,7 +107,7 @@ Find confi file in `dataStreamSimulator/src/main/resources/application.propertie
 Uncomment the line `# csv.file.path=<your file path>`
 
 Replace `<your file path>` by the file path to the dataset which will be sent as streams
-- For initial test, replace the `csv.file.name` with the path where you cloned er_embedding_streaming in section ER  step 1:
+- For initial test, replace the `csv.file.name` with the path where you cloned er_embedding_streaming in section "Preperation":
 `csv.file.path=<rootFolder>/er_embedding_streaming/Data_example/fodors_zagats-tableB.csv`
 - During experiments, pay attention to the following variables:
 ```
@@ -172,7 +172,9 @@ Results of evaluation are shown as follows:
 
 Get statistical results shown as graphs by command:
 ```bash
-scp <original path> <new path>
+scp -P <port> -r <original path> <new path>
 ```
+For files in distance server, the path: `<username>@<ip address>:<file>`
+
 <br><br>
 > Repete steps 1-3 in "Execution" section for more tests
